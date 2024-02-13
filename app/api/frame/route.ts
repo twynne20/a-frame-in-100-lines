@@ -7,9 +7,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   let text: string | undefined = '';
 
   const body: FrameRequest = await req.json();
+  // Uses getFrameMessage from onchainkit to validate and interpret the request 
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
   if (isValid) {
+    // Pull the user's wallet address from the message 
     accountAddress = message.interactor.verified_accounts[0];
   }
 
@@ -23,7 +25,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       { status: 302 },
     );
   }
-
+  // Sends a Next Response containing a new frame, which is then displayed to the user 
   return new NextResponse(
     getFrameHtmlResponse({
       buttons: [
@@ -32,7 +34,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/park-1.png`,
+        src: `${NEXT_PUBLIC_URL}/park-2.png`,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
