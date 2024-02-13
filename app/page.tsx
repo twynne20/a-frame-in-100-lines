@@ -18,7 +18,8 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-1.png`,
+    src: `https://a-frame-in-100-lines-six-theta.vercel.app/park-3.png`,
+    // src: `${NEXT_PUBLIC_URL}/park-3.png`,
     aspectRatio: '1:1',
   },
   input: {
@@ -28,12 +29,13 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
+  title: 'tyson.xyz',
   description: 'LFG',
   openGraph: {
-    title: 'zizzamia.xyz',
+    title: 'tyson.xyz',
     description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`https://a-frame-in-100-lines-six-theta.vercel.app/park-3.png`],
+    // images: [`${NEXT_PUBLIC_URL}/park-3.png`],
   },
   other: {
     ...frameMetadata,

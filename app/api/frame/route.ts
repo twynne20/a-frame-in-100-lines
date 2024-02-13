@@ -34,9 +34,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/park-2.png`,
+        src: `https://a-frame-in-100-lines-six-theta.vercel.app/park-2.png`,
+        // src: `${NEXT_PUBLIC_URL}/park-2.png`,
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+      postUrl: `https://a-frame-in-100-lines-six-theta.vercel.app/api/frame`,
+      // postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
   );
 }
