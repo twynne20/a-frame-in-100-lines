@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `${NEXT_PUBLIC_URL}/park-1.png`,
     aspectRatio: '1:1',
   },
   input: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'zizzamia.xyz',
     description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`${NEXT_PUBLIC_URL}/park-2.png`],
   },
   other: {
     ...frameMetadata,
@@ -44,6 +44,7 @@ export default function Page() {
   return (
     <>
       <h1>tyson</h1>
+
     </>
   );
 }
